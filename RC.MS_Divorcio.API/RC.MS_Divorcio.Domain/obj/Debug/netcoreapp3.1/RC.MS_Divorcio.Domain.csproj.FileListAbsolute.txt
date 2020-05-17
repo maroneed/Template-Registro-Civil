@@ -1,0 +1,12 @@
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.deps.json
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.dll
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.AssemblyInfoInputs.cache
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.AssemblyInfo.cs
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.csprojAssemblyReference.cache
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.runtimeconfig.json
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.runtimeconfig.dev.json
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.genruntimeconfig.cache
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.pdb
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.dll
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Domain\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.pdb

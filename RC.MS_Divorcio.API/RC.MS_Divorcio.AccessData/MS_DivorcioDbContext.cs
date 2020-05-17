@@ -1,0 +1,61 @@
+﻿using Microsoft.EntityFrameworkCore;
+using RC.MS_Divorcio.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+
+namespace RC.MS_Divorcio.AccessData
+{
+    public class MS_DivorcioDbContext : DbContext
+    {
+        public MS_DivorcioDbContext(DbContextOptions<MS_DivorcioDbContext>options
+            ): base(options)
+        {
+            
+        }
+
+        public DbSet<DetalleHijos> DetalleHijos { get; set; }
+        public DbSet<DomicilioConvivencia> DomicilioConvivencia { get; set; }
+        public DbSet<Hijos> Hijos { get; set; }
+        public DbSet<Propuesta> Propuestas { get; set; }
+        public DbSet<SolicitudTipo> SolicitudTipos { get; set; }
+        public DbSet<TramiteDivorcio> TramiteDivorcios { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //detalleHijos
+        
+            modelBuilder.Entity<DetalleHijos>().Property(s => s.Id).ValueGeneratedOnAdd();
+            
+
+            //DomicilioConvivencia
+
+            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.Id).ValueGeneratedOnAdd();
+            
+            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.numero).HasMaxLength(45);
+            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.calle).HasMaxLength(45);
+
+            //Hijos
+
+            modelBuilder.Entity<Hijos>().Property(v => v.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Hijos>().HasIndex(v => v.personaId).IsUnique();
+
+            //propuesta
+
+            modelBuilder.Entity<Propuesta>().Property(v => v.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Propuesta>().Property(t => t.descripcion).HasMaxLength(250);
+
+            //solicitudTipo
+
+            modelBuilder.Entity<SolicitudTipo>().Property(v => v.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<SolicitudTipo>().Property(t => t.descripcion).HasMaxLength(20);
+            modelBuilder.Entity<SolicitudTipo>().Property(t => t.valor).HasColumnType("decimal(15,2)").IsRequired();
+
+
+            s
+
+
+        }
+    }
+}
