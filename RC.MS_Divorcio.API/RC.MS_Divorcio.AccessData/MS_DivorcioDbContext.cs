@@ -33,27 +33,45 @@ namespace RC.MS_Divorcio.AccessData
 
             modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.Id).ValueGeneratedOnAdd();
             
-            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.numero).HasMaxLength(45);
-            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.calle).HasMaxLength(45);
+            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.numero).HasMaxLength(45).IsRequired(); 
+            modelBuilder.Entity<DomicilioConvivencia>().Property(t => t.calle).HasMaxLength(45).IsRequired(); 
 
             //Hijos
 
             modelBuilder.Entity<Hijos>().Property(v => v.Id).ValueGeneratedOnAdd();
             modelBuilder.Entity<Hijos>().HasIndex(v => v.personaId).IsUnique();
+            modelBuilder.Entity<Hijos>().Property(v => v.personaId).IsRequired();
+
 
             //propuesta
 
             modelBuilder.Entity<Propuesta>().Property(v => v.Id).ValueGeneratedOnAdd();
-            modelBuilder.Entity<Propuesta>().Property(t => t.descripcion).HasMaxLength(250);
+            modelBuilder.Entity<Propuesta>().Property(t => t.descripcion).HasMaxLength(250).IsRequired(); 
 
             //solicitudTipo
 
             modelBuilder.Entity<SolicitudTipo>().Property(v => v.Id).ValueGeneratedOnAdd();
-            modelBuilder.Entity<SolicitudTipo>().Property(t => t.descripcion).HasMaxLength(20);
+            modelBuilder.Entity<SolicitudTipo>().Property(t => t.descripcion).HasMaxLength(20).IsRequired(); 
             modelBuilder.Entity<SolicitudTipo>().Property(t => t.valor).HasColumnType("decimal(15,2)").IsRequired();
 
+            //tramiteDivorcio
 
-            s
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<TramiteDivorcio>().HasIndex(v => v.actaMatrimonioId).IsUnique();
+            modelBuilder.Entity<TramiteDivorcio>().HasIndex(v => v.propuestaId).IsUnique();
+            modelBuilder.Entity<TramiteDivorcio>().HasIndex(v => v.detalleHijosId).IsUnique();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.actaMatrimonioId).IsRequired();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.propuestaId).IsRequired();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.detalleHijosId).IsRequired();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.personaId1).IsRequired();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.personaId2).IsRequired();
+            modelBuilder.Entity<TramiteDivorcio>().Property(v => v.domicilioConyugalId).IsRequired();
+
+
+
+
+
+
 
 
         }

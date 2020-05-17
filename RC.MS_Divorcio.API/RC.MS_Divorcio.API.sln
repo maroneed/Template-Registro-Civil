@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.MS_Divorcio.API", "RC.MS_Divorcio.API\RC.MS_Divorcio.API.csproj", "{8E175320-1EBC-4868-A098-1D434765E150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RC.MS_Divorcio.API", "RC.MS_Divorcio.API\RC.MS_Divorcio.API.csproj", "{8E175320-1EBC-4868-A098-1D434765E150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.MS_Divorcio.Application", "RC.MS_Divorcio.Application\RC.MS_Divorcio.Application.csproj", "{420D1327-5DBF-49FB-A56D-9B1F53470BF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RC.MS_Divorcio.Application", "RC.MS_Divorcio.Application\RC.MS_Divorcio.Application.csproj", "{420D1327-5DBF-49FB-A56D-9B1F53470BF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.MS_Divorcio.Domain", "RC.MS_Divorcio.Domain\RC.MS_Divorcio.Domain.csproj", "{74E527AE-0DEA-4CE4-AC1D-2D981CCF44C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RC.MS_Divorcio.Domain", "RC.MS_Divorcio.Domain\RC.MS_Divorcio.Domain.csproj", "{74E527AE-0DEA-4CE4-AC1D-2D981CCF44C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC.MS_Divorcio.AccessData", "RC.MS_Divorcio.AccessData\RC.MS_Divorcio.AccessData.csproj", "{E0061DAC-718E-45E8-94B3-DA5428A3B11B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RC.MS_Divorcio.AccessData", "RC.MS_Divorcio.AccessData\RC.MS_Divorcio.AccessData.csproj", "{E0061DAC-718E-45E8-94B3-DA5428A3B11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
