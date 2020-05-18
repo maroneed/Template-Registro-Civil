@@ -8,8 +8,8 @@ C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.dll
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.pdb
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\bin\Debug\netcoreapp3.1\RC.MS_Divorcio.Domain.pdb
-C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.csproj.CoreCompileInputs.cache
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.csproj.CopyComplete
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.dll
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.pdb
 C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.genruntimeconfig.cache
+C:\Users\Invisible\source\repos\Template-Registro-Civil\RC.MS_Divorcio.API\RC.MS_Divorcio.Application\obj\Debug\netcoreapp3.1\RC.MS_Divorcio.Application.csproj.CoreCompileInputs.cache

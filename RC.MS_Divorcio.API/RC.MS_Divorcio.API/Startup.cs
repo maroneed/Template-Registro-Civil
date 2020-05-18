@@ -15,6 +15,13 @@ using RC.MS_Divorcio.AccessData;
 using RC.MS_Divorcio.AccessData.Commands;
 using RC.MS_Divorcio.Application.Services;
 using RC.MS_Divorcio.Domain.Commands;
+using SqlKata;
+using SqlKata.Execution;
+using RC.MS_Divorcio.Domain.Queries;
+using RC.MS_Divorcio.AccessData.Queries;
+using System.Data.SqlClient;
+using System.Data;
+using SqlKata.Compilers;
 
 namespace RC.MS_Divorcio.API
 {
@@ -42,9 +49,18 @@ namespace RC.MS_Divorcio.API
             services.AddTransient<IDetalleHijosService, DetalleHijosService>();
             services.AddTransient<IDomicilioConvivenciaService, DomicilioConvivenciaService>();
             services.AddTransient<ITramiteDivorcioService, TramiteDivorcioService>();
-           
+            
+            //Queries
+            services.AddTransient<ITramiteDivorcioQuery, TramiteDivorcioQuery>();
 
 
+
+            // SQLKATA
+            services.AddTransient<Compiler, SqlServerCompiler>();
+            services.AddTransient<IDbConnection>(b =>
+            {
+                return new SqlConnection(connectionString);
+            });
 
 
 

@@ -64,6 +64,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[1.1.7, )"
             }
           },
           "imports": [
@@ -145,6 +153,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[1.1.7, )"
             }
           },
           "imports": [
@@ -226,6 +242,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[1.1.7, )"
             }
           },
           "imports": [
@@ -300,6 +324,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[1.1.7, )"
             }
           },
           "imports": [
