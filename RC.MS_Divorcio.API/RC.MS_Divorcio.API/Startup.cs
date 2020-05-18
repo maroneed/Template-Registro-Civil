@@ -12,6 +12,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RC.MS_Divorcio.AccessData;
+using RC.MS_Divorcio.AccessData.Commands;
+using RC.MS_Divorcio.Application.Services;
+using RC.MS_Divorcio.Domain.Commands;
 
 namespace RC.MS_Divorcio.API
 {
@@ -30,6 +33,21 @@ namespace RC.MS_Divorcio.API
             services.AddControllers();
             var connectionString = Configuration.GetSection("connectionString").Value;
             services.AddDbContext<MS_DivorcioDbContext>(options => options.UseSqlServer(connectionString));
+            //injectamos el repositorio
+            services.AddTransient<IGenericsRepository, GenericsRepository>();
+            //injectamos los service
+            services.AddTransient<IPropuestaService, PropuestaService>();
+            services.AddTransient<ISolicitudTipoService, SolicitudTipoService>();
+            services.AddTransient<IHijosService, HijosService>();
+            services.AddTransient<IDetalleHijosService, DetalleHijosService>();
+            services.AddTransient<IDomicilioConvivenciaService, DomicilioConvivenciaService>();
+            services.AddTransient<ITramiteDivorcioService, TramiteDivorcioService>();
+           
+
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
