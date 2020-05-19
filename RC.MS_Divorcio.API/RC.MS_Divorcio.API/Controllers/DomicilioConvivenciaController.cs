@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using RC.MS_Divorcio.Application.Services;
 using RC.MS_Divorcio.Domain.Entities;
 using RC.MS_Divorcio.Domain.DTOs;
+using RC.MS_Divorcio.Domain.Queries;
 
 namespace RC.MS_Divorcio.API.Controllers
 {
@@ -16,6 +17,8 @@ namespace RC.MS_Divorcio.API.Controllers
     public class DomicilioConvivenciaController: ControllerBase
     {
         private readonly IDomicilioConvivenciaService _service;
+        private readonly IDomicilioConvivenciaQuery _query;
+
 
         public DomicilioConvivenciaController(IDomicilioConvivenciaService service)
         {
@@ -29,6 +32,19 @@ namespace RC.MS_Divorcio.API.Controllers
             try
             {
                 return new JsonResult(_service.createDomicilioConvivencia(domicilio)) { StatusCode = 201 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult get()
+        {
+            try
+            {
+                return new JsonResult(_service.GetDomicilios()) { StatusCode = 201 };
             }
             catch (Exception e)
             {

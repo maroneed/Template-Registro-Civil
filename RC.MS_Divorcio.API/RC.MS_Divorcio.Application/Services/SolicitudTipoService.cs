@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using RC.MS_Divorcio.Domain.DTOs;
 using RC.MS_Divorcio.Domain.Commands;
+using RC.MS_Divorcio.Domain.Queries;
 
 namespace RC.MS_Divorcio.Application.Services
 {
@@ -11,14 +12,18 @@ namespace RC.MS_Divorcio.Application.Services
     public interface ISolicitudTipoService
     {
         public SolicitudTipo CreateSolicitudTipo(SolicitudTipoDto solicitudTipo);
+        public List<SolicitudTipoDto> GetSolicitudTipo();
     }
     public class SolicitudTipoService : ISolicitudTipoService
     {
         private readonly IGenericsRepository _repository;
+        private readonly ISolicitudTipoQuery _query;
 
-        public SolicitudTipoService(IGenericsRepository repository)
+
+        public SolicitudTipoService(IGenericsRepository repository, ISolicitudTipoQuery query)
         {
             _repository = repository;
+            _query = query;
         }
 
         public SolicitudTipo CreateSolicitudTipo(SolicitudTipoDto solicitudTipo)
@@ -32,6 +37,11 @@ namespace RC.MS_Divorcio.Application.Services
             _repository.Add<SolicitudTipo>(entity);
 
             return entity;
+        }
+
+        public List<SolicitudTipoDto> GetSolicitudTipo()
+        {
+            return _query.GetSolicitudTipo();
         }
     }
 }

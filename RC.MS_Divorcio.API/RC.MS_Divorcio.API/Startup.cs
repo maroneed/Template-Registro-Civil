@@ -52,6 +52,15 @@ namespace RC.MS_Divorcio.API
             
             //Queries
             services.AddTransient<ITramiteDivorcioQuery, TramiteDivorcioQuery>();
+            services.AddTransient<IPropuestaQuery, PropuestaQuery>();
+            services.AddTransient<IDomicilioConvivenciaQuery, DomicilioConvivenciaQuery>();
+            services.AddTransient<IHijosQuery, HijosQuery>();
+            services.AddTransient<IDetalleHijosQuery, DetalleHijosQuery>();
+            services.AddTransient<ISolicitudTipoQuery, SolicitudTipoQuery>();
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using RC.MS_Divorcio.Domain.DTOs;
 using RC.MS_Divorcio.Domain.Commands;
+using RC.MS_Divorcio.Domain.Queries;
 
 namespace RC.MS_Divorcio.Application.Services
 {
@@ -12,15 +13,19 @@ namespace RC.MS_Divorcio.Application.Services
     public interface IPropuestaService
     {
         public Propuesta CreatePropuesta(PropuestaDto propuesta);
+        public List<PropuestaDto> GetPropuestas();
     }
 
     public class PropuestaService : IPropuestaService
     {
         private readonly IGenericsRepository _repository;
+        private readonly IPropuestaQuery _query;
 
-        public PropuestaService(IGenericsRepository repository)
+
+        public PropuestaService(IGenericsRepository repository, IPropuestaQuery query)
         {
             _repository = repository;
+            _query = query;
         }
 
         public Propuesta CreatePropuesta(PropuestaDto propuesta)
@@ -33,6 +38,11 @@ namespace RC.MS_Divorcio.Application.Services
             _repository.Add<Propuesta>(entity);
 
             return entity;
+        }
+
+        public List<PropuestaDto> GetPropuestas()
+        {
+            return _query.GetPropuestas();
         }
     }
 }

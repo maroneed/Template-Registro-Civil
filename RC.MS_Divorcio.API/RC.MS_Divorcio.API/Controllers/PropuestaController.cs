@@ -36,5 +36,18 @@ namespace RC.MS_Divorcio.API.Controllers
             }
         }
 
+        [HttpGet]
+        public IActionResult get()
+        {
+            try
+            {
+                return new JsonResult(_service.GetPropuestas()) { StatusCode = 201 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
     }
 }
