@@ -10,7 +10,7 @@ namespace RC.MS_Divorcio.Application.Services
 {
     public interface ITramiteDivorcioService
     {
-        public TramiteDivorcio createTramiteDivorcio(TramiteDivorcioDto tramite);
+        public TramiteDivorcio createTramiteDivorcio(RegistroTramiteDto tramite);
         public List <TramiteDivorcioDto> GetTramites();
 
     }
@@ -26,23 +26,42 @@ namespace RC.MS_Divorcio.Application.Services
             _query = query;
         }
 
-        public TramiteDivorcio createTramiteDivorcio(TramiteDivorcioDto tramite)
+        public TramiteDivorcio createTramiteDivorcio(RegistroTramiteDto tramite)
         {
-            var entity = new TramiteDivorcio    //esto parsea un objeto de clase PropuestaDto en un objeto de clase Propuesta
+            var domicilio = new DomicilioConvivencia
             {
-                personaId1 = tramite.personaId1,
-                personaId2 = tramite.personaId2,
+                calle = tramite.calle,
+                numero = tramite.numero,
+                localidadId = tramite.localidadId,
+                provinciaId = tramite.provinciaId
+            };
+
+            _repository.Add<DomicilioConvivencia>(domicilio);
+
+
+            var propuesta = new Propuesta
+            {
+                descripcion = tramite.propuesta
+            };
+
+            _repository.Add<Propuesta>(propuesta);
+
+
+            var TramiteDivorcio = new TramiteDivorcio    //esto parsea un objeto de clase PropuestaDto en un objeto de clase Propuesta
+            {
+                personaId1 = tramite.idPersona1,
+                personaId2 = tramite.idPersona2,
                 actaMatrimonioId = tramite.actaMatrimonioId,
-                domicilioConyugalId = tramite.domicilioConyugalId,
-                propuestaId = tramite.propuestaId,
-                detalleHijosId = tramite.detalleHijosId,
+                domicilioConyugalId = domicilio.Id,
+                propuestaId = propuesta.Id,
+                solicitudTipoId = tramite.solicitudTipoId,
                 fecha = DateTime.Now
 
             };
 
-            _repository.Add<TramiteDivorcio>(entity);
+            _repository.Add<TramiteDivorcio>(TramiteDivorcio);
 
-            return entity;
+            return TramiteDivorcio;
         }
 
         public List <TramiteDivorcioDto> GetTramites()

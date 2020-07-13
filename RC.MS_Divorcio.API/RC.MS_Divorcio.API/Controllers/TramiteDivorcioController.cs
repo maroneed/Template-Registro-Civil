@@ -23,7 +23,7 @@ namespace RC.MS_Divorcio.API.Controllers
 
         [HttpPost]
 
-        public IActionResult post(TramiteDivorcioDto tramite)
+        public IActionResult post(RegistroTramiteDto tramite)
         {
             try
             {

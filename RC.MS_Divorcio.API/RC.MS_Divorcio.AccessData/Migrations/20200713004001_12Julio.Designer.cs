@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RC.MS_Divorcio.AccessData;
 
 namespace RC.MS_Divorcio.AccessData.Migrations
 {
     [DbContext(typeof(MS_DivorcioDbContext))]
-    partial class MS_DivorcioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200713004001_12Julio")]
+    partial class _12Julio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -94,6 +96,9 @@ namespace RC.MS_Divorcio.AccessData.Migrations
                     b.Property<int>("actaMatrimonioId")
                         .HasColumnType("int");
 
+                    b.Property<int>("detalleHijosId")
+                        .HasColumnType("int");
+
                     b.Property<int>("domicilioConyugalId")
                         .HasColumnType("int");
 
@@ -109,12 +114,15 @@ namespace RC.MS_Divorcio.AccessData.Migrations
                     b.Property<int>("propuestaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("solicitudTipoId")
+                    b.Property<int?>("solicitudTipoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("actaMatrimonioId")
+                        .IsUnique();
+
+                    b.HasIndex("detalleHijosId")
                         .IsUnique();
 
                     b.HasIndex("domicilioConyugalId");
@@ -143,9 +151,7 @@ namespace RC.MS_Divorcio.AccessData.Migrations
 
                     b.HasOne("RC.MS_Divorcio.Domain.Entities.SolicitudTipo", "solicitudTipo")
                         .WithMany()
-                        .HasForeignKey("solicitudTipoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("solicitudTipoId");
                 });
 #pragma warning restore 612, 618
         }

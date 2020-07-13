@@ -12,12 +12,9 @@ namespace RC.MS_Divorcio.Domain.Entities
         public int actaMatrimonioId { get; set; }
         public int domicilioConyugalId { get; set; }
         public int propuestaId { get; set; }
-        public int detalleHijosId { get; set; }
+        public int solicitudTipoId { get; set; }
         public DateTime fecha { get; set; }
-        public DomicilioConvivencia domicilioConyugal { get; set; }
-        public Propuesta propuesta { get; set; }
-        public DetalleHijos detalleHijos { get; set; }
-        public SolicitudTipo solicitudTipo { get; set; }
+        
 
     }
 }
