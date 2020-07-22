@@ -12,6 +12,10 @@ namespace RC.MS_Divorcio.Application.Services
     {
         public TramiteDivorcio createTramiteDivorcio(RegistroTramiteDto tramite);
         public List <TramiteDivorcioDto> GetTramites();
+        public RegistroDeConsultaDto GetDivorcioPorActa(int actaMatrimonioId);
+        public RegistroDeConsultaDto GetDivorcioPorPersonaId(int idPersona1);
+
+
 
     }
     public class TramiteDivorcioService: ITramiteDivorcioService
@@ -67,6 +71,14 @@ namespace RC.MS_Divorcio.Application.Services
         public List <TramiteDivorcioDto> GetTramites()
         {
             return _query.GetTramites();
+        }
+        public RegistroDeConsultaDto GetDivorcioPorActa(int actaMatrimonioId)
+        {
+            return _query.GetDivorcioPorActa(actaMatrimonioId);
+        }
+        public RegistroDeConsultaDto GetDivorcioPorPersonaId(int idPersona1)
+        {
+            return _query.GetDivorcioPorPersonaId(idPersona1);
         }
     }
 }

@@ -86,6 +86,16 @@ namespace RC.MS_Divorcio.API
 
             app.UseRouting();
 
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://localhost:3002");
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+                builder.AllowCredentials();
+
+
+            });
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

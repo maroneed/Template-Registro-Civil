@@ -47,6 +47,32 @@ namespace RC.MS_Divorcio.API.Controllers
                 return BadRequest(e.Message);
             }
         }
-
+        
+        [HttpGet]
+        [Route("GetDivorcioPorActa")]
+        public IActionResult GetDivorcioPorActa(int actaMatrimonioId)
+        {
+            try
+            {
+                return new JsonResult(_service.GetDivorcioPorActa(actaMatrimonioId)) { StatusCode = 201 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetDivorcioPorPersonaId")]
+        public IActionResult GetDivorcioPorPersonaId(int idPersona1)
+        {
+            try
+            {
+                return new JsonResult(_service.GetDivorcioPorPersonaId(idPersona1)) { StatusCode = 201 };
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }
